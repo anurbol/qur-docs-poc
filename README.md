@@ -1,3 +1,3 @@
 advantages/features:
 - guaranteed actuality (up-to-date)
-- guaranteed correct syntaxno typos
+- guaranteed correct syntax, no typos
