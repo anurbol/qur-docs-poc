@@ -1,6 +1,5 @@
 // todo del this file
 
-
 class Docs {
     public static pages<PAGES extends object>(pagesObj: PAGES): PAGES {
         return pagesObj
