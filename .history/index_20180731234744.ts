@@ -1,1 +1,0 @@
-const Foo_bar = 'bar'
