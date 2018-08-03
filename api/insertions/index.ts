@@ -1,34 +1,11 @@
-import { TPage } from "../../lib/TYP";
-
-export const CODE_BLOCK = (codeBlock: () => any) => {
-    // nothing here, because this function is playng a role of a token for typescript parser
-}
-
-export class TableOfContents {
+export function LINK() {
 
 }
 
-// todo below
-// tslint:disable
-// todo above
-export class Section {
-    private isSection = true
+export function CODE_BLOCK() {
 
-    constructor(text: string) {
-
-    }
-}
-export class Page {
-    private isPage = true
-
-    constructor(sections: object) {
-
-    }
-}
-export class Anchor {
-    private isParagraph = true
 }
 
-export const LINK = (target: Section | Page | Anchor, text?: string) => {
-    // todo 
+export function tableOfContents() {
+
 }

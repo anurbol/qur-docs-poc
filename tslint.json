@@ -10,7 +10,9 @@
         // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
         "no-default-export": true,
         "no-require-imports": true,
-        "arrow-parens": false
+        "arrow-parens": false,
+        "interface-over-type-literal": false,
+        "interface-name": false
     },
     "rulesDirectory": []
 }

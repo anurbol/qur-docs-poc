@@ -4,14 +4,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // tslint:disable-next-line:ordered-imports
 const api_1 = require("./api");
 const insertions_1 = require("./api/insertions");
-function link(fpp) {
-    // ...
-}
 // INTERNATIONALIZATION????????????????????????????????
 translation("ru-RU", docs2, {
 // this obj MUST be compatiable with orig
 });
-const docs2 = create({
+const docs2 = api_1.create({
     "foo": {
         bar: `baz`,
     },
@@ -19,12 +16,12 @@ const docs2 = create({
         "tutorial 1": {
             "1": "intro",
             "2": "intro",
-            "headed section": `some text ${link(() => docs2)}`,
+            "headed section": `some text ${insertions_1.LINK(() => docs2)}`,
         },
     },
 });
-const docs = {
-    "Table of contents": api_1.tableOfContents(),
+const docs0 = {
+    "Table of contents": insertions_1.tableOfContents(),
     "Tutorials"() {
         return {
             "tutorial 1": {
@@ -35,13 +32,13 @@ const docs = {
     },
     "Overview"() {
         this.Tutorials()["tutorial 1"]["headed section"];
-        return api_1.page({
-            "1": api_1.section(`QurDocs is a revolution of a software documentation making.
+        return page({
+            "1": section(`QurDocs is a revolution of a software documentation making.
             Yes, you are at the very moment are meeting the revolution, because
             FINALLY we have an ability to create docs that are both human-friendly
             and absolutely, 100% relevant, guaranteed.`),
-            "2": api_1.section({
-                "some subsection": api_1.section(`text`)
+            "2": section({
+                "some subsection": section(`text`)
             })
         }),
         ;

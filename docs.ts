@@ -1,12 +1,8 @@
 // tslint:disable:object-literal-sort-keys
 
 // tslint:disable-next-line:ordered-imports
-import { category, page, section, tableOfContents } from "./api"
-import { CODE_BLOCK, LINK } from "./api/insertions"
-
-function link(fpp: any): void {
-    // ...
-}
+import {create} from "./api"
+import { CODE_BLOCK, LINK, tableOfContents } from "./api/insertions"
 
 // INTERNATIONALIZATION????????????????????????????????
 translation("ru-RU", docs2, {
@@ -21,7 +17,7 @@ const docs2 = create({
         "tutorial 1": {
             "1": "intro", // todo disallow accessing sections by numeric fields
             "2": "intro", // todo disallow accessing sections by numeric fields
-            "headed section": `some text ${link(() => docs2)}`,
+            "headed section": `some text ${LINK(() => docs2)}`,
             // if key is only digits and dots then the section is not headed
 
             // if one of object values is string, then it is section and containing obj is either page (has at least 1 section) or parent section 
@@ -29,7 +25,7 @@ const docs2 = create({
     },
 })
 
-const docs = {
+const docs0 = {
     "Table of contents": tableOfContents(),
     "Tutorials"() {
         return {
