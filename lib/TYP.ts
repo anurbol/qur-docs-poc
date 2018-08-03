@@ -1,15 +1,25 @@
-export interface IPageObject {
-    [key: string]: object | string
+export interface ICategoryInput {
+
 }
 
-export interface ISectionObject {
-    [key: string]: object | string
+export interface TCategory<INPUT> {
+
 }
 
-export type TPage<PAGE extends IPageObject> = {
-    [K in keyof PAGE]: PAGE[K]
+export interface IPageInput {
+    [key: string]: TSection
 }
 
-export type TSection<SECTION extends ISectionObject> = {
-    [K in keyof SECTION]: SECTION[K]
+export type TPage<INPUT extends IPageInput> = {
+    [K in keyof INPUT]: INPUT[K]
+}
+
+export type TSectionInput = string | ISubSections
+
+export type TSection<INPUT extends TSectionInput = TSectionInput> = {
+    [K in keyof INPUT]: INPUT[K]
+} | string
+
+export interface ISubSections {
+    [key: string]: TSection
 }

@@ -1,6 +1,6 @@
 "use strict";
-// todo del this file
-Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable:max-file-line-count
+// // todo del this file
 // class Docs {
 //     public static pages<PAGES extends object>(pagesObj: PAGES): PAGES {
 //         return pagesObj
@@ -78,3 +78,70 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // /**
 //  * 
 //  */
+// if (0) {
+//     type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends ((k: infer I) => void) ? I : never
+//     const array = [{ foo: 'val1' }, { bar: 'val2' }]
+//     function flatten<T>(array: T[]): T {
+//         // implementation here, does not matter, all that matter is that it returns following:
+//         return { foo: 'val1', bar: 'val2' } as any
+//     }
+//     // at this point IDE suggests two values: "foo" and "bar"
+//     console.log(flatten(array)) // TODO DELETE
+// }
+// else {
+//     const section: {
+//         <TITLE extends string = "_none_">(content: string): TSection<TITLE>;
+//         // tslint:disable:unified-signatures
+//         <TITLE extends string>(title: TITLE, content: string): TSection<TITLE>;
+//     } = (first: string, second?: string) => {
+//         let title: string
+//         let content: string
+//         if (second) {
+//             title = first
+//             content = second
+//         } else {
+//             title = "_none_"
+//             content = first
+//         }
+//         return {
+//             [title]: content,
+//         }
+//     }
+//     type TSection<TITLE extends string = string> = {
+//         [K in TITLE]: string
+//     }
+//     // T = TSection ({foo: 'val'})
+//     // tslint:disable
+//     const page = <T>(sections: T[]): T => {
+//         // console.log(sections) // TODO DELETE
+//         return { foo: 'val1', bar: 'val2' } as any
+//     }
+//     const array = [{ foo: 'val1' }, { bar: 'val2' }]
+//     // const thepage = page(section(`content 1`), section("some title", `content 2`), section("fo"))
+//     const thepage = page([
+//         section("some title", "hgfhg"),
+//         section("some title 2", `test content`)
+//     ]
+//     ).
+//     // console.log(thepage.) // TODO DELETE
+// }
+// TRANSLATIONS (low pr):
+// interface ITemplate {
+//     foo: string
+// }
+// const original = {
+//     foo: {
+//         bar: "baz",
+//     },
+//     qqq: {
+//         eee: {
+//             "some title": 111,
+//         },
+//         222: {
+//             "uuu aaa": 222,
+//         },
+//     },
+// }
+// function translate<TEMPLATE>(lang: string, trans: TEMPLATE): void {
+//     // todo
+// }
