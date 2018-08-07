@@ -18,3 +18,14 @@ find out how to add
 
 
 delete sandbox npm dep
+
+
+
+
+
+revise travis.yml
+
+
+
+
+del tmp deps e.g. "../qur-typetest-poc"

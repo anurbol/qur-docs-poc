@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha --recursive",
     "test-debug": "mocha --recursive --inspect",
+    "typetest": "qur-typetest",
     "lint": "tslint --project ."
   },
   "author": "",
@@ -15,15 +16,16 @@
     "@types/find-up": "^2.1.1",
     "@types/lodash": "^4.14.116",
     "@types/mocha": "^5.2.5",
-    "@types/node": "^10.5.5",
+    "@types/node": "^10.5.6",
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
+    "qur-typetest-poc": "file:../qur-typetest-poc",
     "tslint": "^5.11.0"
   },
   "dependencies": {
     "find-up": "^3.0.0",
     "lodash": "^4.17.10",
     "sandbox": "file:../sandbox",
-    "typescript": "^3.0.0-rc"
+    "typescript": "^3.0.1"
   }
 }
