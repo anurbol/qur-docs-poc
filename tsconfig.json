@@ -6,7 +6,11 @@
     ],
     "target": "es6",
     "module": "commonjs",
-    "moduleResolution": "node",
     "strict": true
-  }
+  },
+  "exclude": [
+    "test/qur-typetest",
+    "node_modules", 
+    "typings"
+  ]
 }
