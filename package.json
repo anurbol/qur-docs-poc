@@ -9,7 +9,7 @@
     "typetest": "qur-typetest",
     "lint": "tslint --project ."
   },
-  "author": "",\
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@qur/typetest": "^1.0.4",
